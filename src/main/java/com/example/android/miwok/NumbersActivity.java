@@ -17,5 +17,12 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("one");
         words.add("two");
         words.add("ten");
+        
+        //parent view
+        LinearLayout rootView =(LinearLayout) findViewById(R.id.rootView);
+        //child view
+        TextView wordView=  new TextView(this);
+        wordView.setText(words.get(0));
+        rootView.addView(wordView);
     }
 }
